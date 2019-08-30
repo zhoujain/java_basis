@@ -60,7 +60,12 @@
         <!--配置切面 -->
         <aop:aspect id="logAdvice" ref="logger">
             <!-- 配置通知的类型，并且建立通知方法和切入点方法的关联-->
-            <aop:before method="beginDisplay" pointcut="execution( public void com.zhoujian.ReflectTest.AOPTest01.Impl.AccountServiceImpl.save())"></aop:before>
+<!--            <aop:before method="beginDisplay" pointcut="execution( public void com.zhoujian.ReflectTest.AOPTest01.Impl.AccountServiceImpl.save())"></aop:before>-->
+<!--            <aop:after-returning method="afterDisplay" pointcut="execution( public void com.zhoujian.ReflectTest.AOPTest01.Impl.AccountServiceImpl.save())"></aop:after-returning>-->
+<!--            <aop:after-throwing method="afterThrowDisplay" pointcut="execution( public void com.zhoujian.ReflectTest.AOPTest01.Impl.AccountServiceImpl.save())"></aop:after-throwing>-->
+<!--            <aop:after method="afterAllDisplay" pointcut="execution( public void com.zhoujian.ReflectTest.AOPTest01.Impl.AccountServiceImpl.save())"></aop:after>-->
+<!--           环绕通知-->
+            <aop:around method="aroundDisplay" pointcut="execution(public void com.zhoujian.ReflectTest.AOPTest01.Impl.AccountServiceImpl.save())"></aop:around>
         </aop:aspect>
     </aop:config>
 
